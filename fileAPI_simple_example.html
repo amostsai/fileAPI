@@ -1,0 +1,62 @@
+<html>
+<!doctype html>
+    <head>
+        <meta charset=utf-8>
+        <link href="https://dl.dropbox.com/u/35861696/WebBox/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://dl.dropbox.com/u/35861696/WebBox/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
+        <script type="text/javascript" src="https://dl.dropbox.com/u/35861696/WebBox/jquery-1.8.0.min.js"></script>
+        <style>
+            .dropFile { 
+                border:7px dashed #ccc;
+                border-radius:10px;
+                text-shadow:1px 1px 0 #fff;
+                min-height: 100px;
+                cursor: pointer;
+            }
+            .dropFile.hover{
+                border-color:#777;
+                background-color:#fff;
+            }
+            .thumb {
+                height: 100px;
+                width: auto;
+                margin: 10px 5px 0 0;
+            }
+            .progressBar {
+              margin: 10px 0;
+              padding: 3px;
+              border: 1px solid #000;
+              font-size: 14px;
+              opacity: 0;
+              -moz-transition: opacity 1s linear;
+              -o-transition: opacity 1s linear;
+              -webkit-transition: opacity 1s linear;
+            }
+            .progressBar.loading {
+              opacity: 1.0;
+            }
+            .progressBar .percent {
+              background-color: #99ccff;
+              height: auto;
+              width: 0;
+            }
+            .margin10 {
+                margin: 10px 0px;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="dropFile">Drop Your Files Here!<br></div>
+        <div class="result"></div>
+        <button class="btn btn-primary margin10 uploadToServer" type="button">檔案上傳</button>
+        <script src="http://dl.dropbox.com/u/35861696/WebBox/bootstrap/js/bootstrap.min.js"></script>
+        <script src="http://dl.dropbox.com/u/35861696/WebTools/fileAPI/fileAPI.js"></script>
+        <script src="http://dl.dropbox.com/u/35861696/WebTools/stringAPI.js"></script>
+        <script>
+            $(function() {
+                fileAPI.init();
+            });
+        </script>
+    </body>
+</html>
